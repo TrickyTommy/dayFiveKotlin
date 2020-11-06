@@ -83,5 +83,18 @@ val c = (1..100).filter { it % 5 == 0 }
 
     println("Data yang cocok: $match")
     println("tidak cocok $rest")
+    //grouping
+
+    val da = listOf("one","two","tree","four","five")
+    val (matcha, resta) = d.partition { it.length > 3 }
+
+    println("groupby${da.groupBy { it.first() }}")
+    println("groupby upper${da.groupBy ({ it.first() }){it.toUpperCase()}}")
+    println("groupingby upper${da.groupingBy { it.first() }.eachCount()}")
+
+    //costum order
+
+
+
 
 }
