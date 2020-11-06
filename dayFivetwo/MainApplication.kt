@@ -74,6 +74,14 @@ fun main(){
     println("joinToString postfix dengan limit ${ba.flatten().joinToString(prefix = "List: ",postfix = "done", limit = 4)}")
 
 ///filtering
+    println("Filtering")
+val c = (1..100).filter { it % 5 == 0 }
+    println(c)
 
+    val d = listOf("one","two","tree","four","five")
+    val (match, rest) = d.partition { it.length > 3 }
+
+    println("Data yang cocok: $match")
+    println("tidak cocok $rest")
 
 }
