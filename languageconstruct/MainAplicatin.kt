@@ -31,43 +31,43 @@ fun main(){
             number % 2 == 0 -> throw ArithmeticException("modulo empat")
             else -> throw Exception("else")
         }
-        try {
+//        try {
+//
+//            val random = (1..100).random()
+//
+//            print(random)
+//            getexeption(4)
+//
+//        }catch (exc: IllegalArgumentException) {
+//            exc.printStackTrace()
+//            println("illegal ${exc.message}")
+//        }catch (exc: Exception){
+//            exc.printStackTrace()
+//            print("exceptiion ${exc.message}")
+//
+//        }finally {
+//            print("always execute")
+//
+//        }
 
-            val random = (1..100).random()
-
-            print(random)
-            getexeption(4)
-
-        }catch (exc: IllegalArgumentException) {
-            exc.printStackTrace()
-            println("illegal ${exc.message}")
-        }catch (exc: Exception){
-            exc.printStackTrace()
-            print("exceptiion ${exc.message}")
-
-        }finally {
-            print("always execute")
-
-        }
-
-        //scoope
+        //scoope function
         (1..100).asSequence().let { println(it.filter { item -> item % 2 == 0  }.toList()) }
         (1..100).asSequence().run {
-            print(filter { it%2==0 }.toList())
+            print(filter { it % 2 == 0 }.toList())
         }
         with((1..100).asSequence()){
-            print(filter { it%2 == 0 }.toList())
+            print(filter { it % 2 == 0 }.toList())
         }
 
         val d = (1..100).asSequence().apply {
-            map { it +1 }
-            filter { it %2 == 0 }
+            map { it + 1 }
+            filter { it % 2 == 0 }
         }
         print(d.toList())
 
         val e = (1..100).asSequence().also {
             println("${it.map { item -> item + 1 }.toList()}")
-            println("${it.filter {item -> item %2 ==0 }.toList()}")
+            println("${it.filter {item -> item % 2 == 0 }.toList()}")
         }
 
         print(e.toList())
